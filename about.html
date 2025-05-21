@@ -64,35 +64,29 @@
 
     <!-- javascript begins -->
     <script>
-      const toggle = document.getElementById('menu-toggle');
-      const toggle = document.getElementById('close-menu');
-      const overlayMenu = document.getElementbyId('overlay-menu');
+      const menuToggle = document.getElementById('menu-toggle');
+      const closeBtn = document.getElementById('close-menu');
+      const overlayMenu = document.getElementById('overlay-menu'); // fixed typo: 'getElementById'
 
-      toggle.onclick = () => {
+      menuToggle.onclick = () => {
         overlayMenu.classList.add('active');
       };
+
       closeBtn.onclick = () => {
         overlayMenu.classList.remove('active');
       };
 
       // shrinking navbar on scroll
       window.addEventListener('scroll', () => {
-        const navbr = document.getElementbyId('navbar');
+        const navbar = document.getElementById('navbar');
         if (window.scrollY > 60) {
-          navbr.classList.add('shrink');
+          navbar.classList.add('shrink');
         } else {
           navbar.classList.remove('shrink');
         }
       });
     </script>
-
-    <style>
-      .about-text {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.8s ease;
-      }
-    </style>
+    <!-- javascript ends -->
     
   </body>
   
