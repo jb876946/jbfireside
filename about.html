@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title> About JB </title>
-  <link rel="stylesheet" href="about.style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
 </head>
 
 <body class="about-page">
-
   <!-- navbar begins -->
   <header class="nav-bar">
     <div class="navbar" id="navbar">
@@ -38,23 +37,23 @@
   </div>
   <!-- mobile overlay menu ends -->
 
-  <!-- about section begins -->
+  <!-- hero section begins -->
   <section class="about-section">
     <div class="about-image">
-      <img src="https://images.unsplash.com/photo-1576765607924-8580b2d9837d" alt="JB Fireside Food Truck">
+      <img src="https://images.unsplash.com/photo-1576765607924-8580b2d9837d" alt="JB Fireside Food Truck" />
     </div>
     <div class="about-text">
       <h2> Where There's Smoke, There's Flavor </h2>
       <p>
-        JB Fireside started with a spark — a passion for Caribbean flavors being brought to the streets of Killeen that couldn't be ignored.
+        JB Fireside started with a spark—a passion for Caribbean flavors being brought to the streets of Killeen that couldn't be ignored.
         Our Caribbean homey dishes bring people together with bold heat and rich taste. From our food truck to the streets of Killeen, we're blazing a trail wherever we roll.
       </p>
       <p>
-        Every dish is a tribute to our heritage — that passion, that flame, that JB Fireside kick. Whether it's grilled-over-coals jerk chicken or savory oxtails, we bring the flames — literally.
+        Every dish is a tribute to our heritage, that passion, that flame, that JB Fireside kick. Whether it's grilled over coals Jerk Chicken or our savory, but flavorful Oxtails, we bring the flames—literally.
       </p>
     </div>
   </section>
-  <!-- about section ends -->
+  <!-- hero section ends -->
 
   <!-- footer begins -->
   <footer>
@@ -64,11 +63,11 @@
 
   <!-- JavaScript begins -->
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
+    const openBtn = document.getElementById('menu-toggle');
     const closeBtn = document.getElementById('close-menu');
     const overlayMenu = document.getElementById('overlay-menu');
 
-    menuToggle.onclick = () => {
+    openBtn.onclick = () => {
       overlayMenu.classList.add('active');
     };
 
@@ -76,7 +75,6 @@
       overlayMenu.classList.remove('active');
     };
 
-    // shrinking navbar on scroll
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
       if (window.scrollY > 60) {
@@ -86,7 +84,5 @@
       }
     });
   </script>
-  <!-- JavaScript ends -->
-
 </body>
 </html>
