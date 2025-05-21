@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Home - JB Fireside </title>
+    <link rel="stylesheet" href="index.style.css"/>
+    <link href="https://search.brave.com/search?q=google+apis+bebas+neue&source=desktop&summary=1&conversation=d9904f290a716f40a93434" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <!-- navbar begins -->
+    <header class="navbar" id="navbar">
+      <div class="logo"> JB Fireside </div>
+      <nav class="nav-links desktop-nav">
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About JB </a>
+        <a href="menu.html"> Our Menu </a>
+        <a href="location.html"> Where to Find Us </a>
+        <a href="contact.html"> Contact Us </a>
+      </nav>
+      <div class="mobile-menu-icon" id="menu-toggle"> &#9776; </div>
+    </header>
+    <!-- navbar ends -->
+
+    <!-- mobile overlay menu begins -->
+    <div class="overlay-menu" id="overlay-menu">
+      <div class="close-btn" id="close-menu"> &times; </div>
+      <nav class="overlay-nav">
+        <a href="index.html" class="active"> Home </a>
+        <a href="about.html"> About JB </a>
+        <a href="menu.html"> Our Menu </a>
+        <a href="location.html"> Where to Find Us </a>
+        <a href="contact.html"> Contact Us </a>
+      </nav>
+    </div>
+    <!-- mobile overlay menu ends -->
+
+    <!-- hero section begins -->
+    <section class="hero home-hero">
+      <div class="overlay">
+        <h1> Fire Up Your Taste </h1>
+        <p> Experience bold, savory flavor from the JB Fireside truck. </p>
+      </div>
+    </section>
+
+    <!-- reviews section begins -->
+    <section class="reviews">
+      <h2> 🔥 Rave Reviews </h2>
+      <div class="review-card">
+        <p> Insert review </p>
+        <span> - Insert person's name </span>
+      </div>
+    </section>
+    <!-- reviews section ends -->
+
+    <!-- social section begins -->
+    <section class="social">
+      <h2> Follow the Fire </h2>
+      <div class="social-buttons">
+        <a href="#" class="social-btn instagram" aria-label="Instagram"> Instagram </a>
+        <a href="#" class="social-btn facebook" aria-label="Facebook"> Facebook </a>
+        <a href="#" class="social-btn tiktok" aria-label="Tiktok"> Tiktok </a>
+      </div>
+    </section>
+    <!-- social section ends -->
+
+    <!-- footer begins -->
+    <footer class="footer">
+      <p> &copy; 2025 JB Fireside. All rights reserved. </p>
+    </footer>
+    <!-- footer ends -->
+
+    <!-- javascript begins -->
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const toggle = document.getElementById('close-menu');
+      const overlayMenu = document.getElementById('overlay-menu);
+
+      toggle.onclick = () => overlayMenu.classList.add('active');
+      closeBtn.onclick = () => overlayMenu.classList.remove('active');
+
+      // shrinking navbar begins
+      window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('shrink', window.scrollY > 60);
+      });
+    </script>
+    
+  </body>
+  
+</html>
