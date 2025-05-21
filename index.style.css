@@ -1,11 +1,26 @@
 /* home hero section begins */
 .home-hero {
-  background: url('https://unsplash.com/photos/a-group-of-people-standing-in-front-of-a-food-truck-b2gdRynjL9Q') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1620200421666-d6dce7c5f18e') center/cover no-repeat;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.home-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-hero p {
+  font-size: 1.2rem;
 }
 /* home hero section ends */
 
-/* reviews section begins */
+/* reviews and carousels sections begins */
 .reviews {
   background: #1e1e1e;
   padding: 4rem 2rem;
@@ -20,74 +35,6 @@
   font-size: 2rem;
 }
 
-.review-card {
-  max-width: 600px;
-  margin: auto;
-  background: #2c2c2c;
-  color: #f5f5f5;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(255, 87, 34, 0.3);
-  transition: transform: 0.3s;
-}
-
-.review-card hover {
-  transform: scale(1.02);
-}
-
-.review-card p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.review-card span {
-  color: #ffb74d;
-  font-weight: bold;
-}
-/* reviews section ends */
-
-/* social section begins */
-.social {
-  background: #121212;
-  padding: 4rem 2rem;
-  text-align: center;
-  animation: fadeInUp 1s ease;
-}
-
-,social h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  color: #ff5722;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.social-btn {
-  text-decoration: none;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.instagram { background: linear-gradient(to right, #f58529, #dd2a7b, #8134af); }
-.facebook { background: #3b5998; }
-.tiktok { background: #000; border: 2px solid #fff; }
-
-.social-btn:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
-}
-/* social section ends */
-
-/* carousel begins */
 .carousel-container {
   max-width: 700px;
   margin: auto;
@@ -102,13 +49,17 @@
 
 .review-card {
   min-width: 100%;
+  background: #2c2c2c;
+  color: #f5f5f5;
   padding: 2rem;
   box-sizing: border-box;
-  background: #2c2c2c;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(255, 87, 34, 0.3);
-  color: #f5f5f5;
-  text-align: center;
+  transition: transform 0.3s;
+}
+
+.review-card:hover {
+  transform: scale(1.02);
 }
 
 .review-card p {
@@ -142,12 +93,62 @@
 .carousel-btn:hover {
   background-color: #e64a19;
 }
-/* carousel ends */ 
+/* reviews and carousel sections ends */
+
+/* social section ends */
+.social {
+  background: #121212;
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.social h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ff5722;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  text-decoration: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.instagram {
+  background: linear-gradient(to right, #f58529, #dd2a7b, #8134af);
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.tiktok {
+  background: #000;
+  border: 2px solid #fff;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+/*social section ends */
 
 /* animations begins */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
-  to {opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
@@ -160,4 +161,12 @@
 html {
   scroll-behavior: smooth;
 }
-/* smooth scrolling ends */
+/*smooth scrolling ends */
+
+/* navbar shrink effect begins */
+.shrink {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.85);
+  transition: padding 0.3s, background 0.3s;
+}
+/*navbar shrink effect ends */
