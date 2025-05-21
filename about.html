@@ -10,49 +10,79 @@
   </head>
 
   <body class="about-page">
+
+    <!-- navbar begins -->
     <header class="nav-bar">
-      <h1> JB Fireside </h1>
-      <nav>
+      <div class="navbar" id="navbar"></div>
+      <nav class="nav-links desktop-nav">
         <a href="index.html"> Home </a>
-        <a href="about.html" class="active"> About JB </a>
-        <a href="menu.html"> Menu </a>
-        <a href="location.html"> Where to Find JB </a>
-        <a href="contact.html"> Contact JB </a>
+        <a href="about.html"> About JB </a>
+        <a href="menu.html"> Our Menu </a>
+        <a href="location.html"> Where to Find Us </a>
+        <a href="contact.html"> Contact Us </a>
       </nav>
+      <div class="mobile-menu-icon" id="menu-toggle"> &#9776; </div>
     </header>
+    <!-- navbar ends -->
 
-    <section class="hero">
-      <div class="overlay">
-        <h2> Our Story </h2>
-        <p> Fueled by fire. Crafted with heart. Welcome to JB Fireside. </p>
-        <p> A Yah Suh Nice 💯 </p>
-      </div>
-    </section>
+    <!-- mobile overlay menu begins -->
+    <div class="overlay-menu" id="overlay-menu">
+      <div class="close-btn" id="close-menu"> &times; </div>
+      <nav class="overlay-nav">
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About JB </a>
+        <a href="menu.html"> Our Menu </a>
+        <a href="location.html"> Where to Find Us </a>
+        <a href="contact.html"> Contact Us </a>
+      </nav>
+    </div>
+    <!-- mobile overlay menu ends -->
 
-    <section class="about-grid">
+    <!-- hero section begins -->
+    <section class="about-section">
       <div class="about-image">
-        <img src="https://unsplash.com/photos/a-food-truck-parked-on-the-side-of-the-road-5HFUWHd5cTQ" alt="JB Fireside Truck">
+        <img src="https://unsplash.com/photos/a-food-truck-parked-on-the-side-of-the-road-5HFUWHd5cTQ" alt="JB Fireside Food Truck">
       </div>
       <div class="about-text">
-        <h3> Where There's Smoke, There's Flavor </h3>
-        <p> JB Fireside began with a spark - a love for open flame cooking and bold flavors. From humble beginnings, to a fire-roasted future, we bring the heat to every bite. </p>
+        <h2> Where There's Smoke, There's Flavor </h2>
+        <p>
+          JB Fireside started with a spark-a passion for Caribbean flavors being brought to the streets of Killeen that couldn't be ignored.
+          Our Caribbean homey dishes bring people together with bold heat and rich taste. From our food truck to the streets of Killeen, we're blazing a trail wherever we roll.
+        </p>
+        <p>
+          Every dish is a tribute to our heritage, that passion, that flame, that JB Fireside kick. Whether it's grilled over coals Jerk Chicken or our savory, but flavorful Oxtails, we bring the flames - literally.
+        </p>
       </div>
     </section>
-
+    <!-- hero section ends -->
+        
+    <!-- footer begins -->
     <footer>
       <p> &copy; 2025 JB Fireside. All rights reserved. </p>
     </footer>
+    <!--footer ends -->
 
+    <!-- javascript begins -->
     <script>
+      const toggle = document.getElementById('menu-toggle');
+      const toggle = document.getElementById('close-menu');
+      const overlayMenu = document.getElementbyId('overlay-menu');
+
+      toggle.onclick = () => {
+        overlayMenu.classList.add('active');
+      };
+      closeBtn.onclick = () => {
+        overlayMenu.classList.remove('active');
+      };
+
+      // shrinking navbar on scroll
       window.addEventListener('scroll', () => {
-        const textBlocks = document.querySelectorAll('.about-text');
-        textBlocks.forEach(el => {
-          const top = el.getBoundingClientRect().top;
-          if (top < window.innerHeight - 100) {
-            el.style.opacity = 1;
-            el.style.transform = 'translateY(0)';
-          }
-        });
+        const navbr = document.getElementbyId('navbar');
+        if (window.scrollY > 60) {
+          navbr.classList.add('shrink');
+        } else {
+          navbar.classList.remove('shrink');
+        }
       });
     </script>
 
