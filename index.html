@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title> Home - JB Fireside </title>
     <link rel="stylesheet" href="index.style.css"/>
-    <link href="https://search.brave.com/search?q=google+apis+bebas+neue&source=desktop&summary=1&conversation=d9904f290a716f40a93434" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    
     <!-- navbar begins -->
     <header class="navbar" id="navbar">
       <div class="logo"> JB Fireside </div>
@@ -21,13 +20,13 @@
         <a href="location.html"> Where to Find Us </a>
         <a href="contact.html"> Contact Us </a>
       </nav>
-      <div class="mobile-menu-icon" id="menu-toggle"> &#9776; </div>
+      <div class="mobile-menu-icon" id="menu-toggle">&#9776;</div>
     </header>
     <!-- navbar ends -->
 
     <!-- mobile overlay menu begins -->
     <div class="overlay-menu" id="overlay-menu">
-      <div class="close-btn" id="close-menu"> &times; </div>
+      <div class="close-btn" id="close-menu">&times;</div>
       <nav class="overlay-nav">
         <a href="index.html" class="active"> Home </a>
         <a href="about.html"> About JB </a>
@@ -55,15 +54,18 @@
             <p> Insert review 1 </p>
             <span> - insert person's name </span>
           </div>
+          
           <div class="review-card">
             <p> Insert review 2 </p>
             <span> - insert person's name </span>
           </div>
+          
           <div class="review-card">
             <p> Insert review 3 </p>
             <span> - insert person's name </span>
           </div>
         </div>
+        
         <div class="carousel-buttons">
           <button class="carousel-btn" onclick="prevSlide()"> &#8592; </button>
           <button class="carousel-btn" onclick="nextSlide()"> &#8594; </button>
@@ -91,19 +93,20 @@
 
     <!-- javascript begins -->
     <script>
-      const toggle = document.getElementById('menu-toggle');
-      const toggle = document.getElementById('close-menu');
-      const overlayMenu = document.getElementById('overlay-menu);
+      const menuToggle = document.getElementById('menu-toggle');
+      const closeBtn = document.getElementById('close-menu');
+      const overlayMenu = document.getElementById('overlay-menu');
 
-      toggle.onclick = () => overlayMenu.classList.add('active');
+      menuToggle.onclick = () => overlayMenu.classList.add('active');
       closeBtn.onclick = () => overlayMenu.classList.remove('active');
 
-      // shrinking navbar begins
+      // shrinking navbar
       window.addEventListener('scroll', () => {
         const navbar = document.getElementById('navbar');
         navbar.classList.toggle('shrink', window.scrollY > 60);
       });
 
+      // reviews carousel
       const carousel = document.getElementById("carousel");
       let index = 0;
 
@@ -119,12 +122,10 @@
       }
 
       function prevSlide() {
-        showSlide(index + 1);
+        showSlide(index - 1);
       }
 
-      setInterval(nextSlide, 6000); //auto-rotate every 6s
+      setInterval(nextSlide, 6000); // auto-rotate every 6 seconds
     </script>
-    
   </body>
-  
 </html>
