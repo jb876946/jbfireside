@@ -42,6 +42,27 @@
     <footer>
       <p> &copy; 2025 JB Fireside. All rights reserved. </p>
     </footer>
+
+    <script>
+      window.addEventListener('scroll', () => {
+        const textBlocks = document.querySelectorAll('.about-text');
+        textBlocks.forEach(el => {
+          const top = el.getBoundingClientRect().top;
+          if (top < window.innerHeight - 100) {
+            el.style.opacity = 1;
+            el.style.transform = 'translateY(0)';
+          }
+        });
+      });
+    </script>
+
+    <style>
+      .about-text {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+    </style>
     
   </body>
   
