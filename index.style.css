@@ -18,6 +18,19 @@
 .home-hero p {
   font-size: 1.2rem;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
 /* home hero section ends */
 
 /* reviews and carousels sections begins */
