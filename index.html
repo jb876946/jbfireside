@@ -49,9 +49,25 @@
     <!-- reviews section begins -->
     <section class="reviews">
       <h2> 🔥 Rave Reviews </h2>
-      <div class="review-card">
-        <p> Insert review </p>
-        <span> - Insert person's name </span>
+      <div class="carousel-container">
+        <div class="carousel" id="carousel">
+          <div class="review-card">
+            <p> Insert review 1 </p>
+            <span> - insert person's name </span>
+          </div>
+          <div class="review-card">
+            <p> Insert review 2 </p>
+            <span> - insert person's name </span>
+          </div>
+          <div class="review-card">
+            <p> Insert review 3 </p>
+            <span> - insert person's name </span>
+          </div>
+        </div>
+        <div class="carousel-buttons">
+          <button class="carousel-btn" onclick="prevSlide()"> &#8592; </button>
+          <button class="carousel-btn" onclick="nextSlide()"> &#8594; </button>
+        </div>
       </div>
     </section>
     <!-- reviews section ends -->
@@ -87,6 +103,26 @@
         const navbar = document.getElementById('navbar');
         navbar.classList.toggle('shrink', window.scrollY > 60);
       });
+
+      const carousel = document.getElementById("carousel");
+      let index = 0;
+
+      function showSlide(i) {
+        const total = carousel.children.length;
+        index = (i + total) % total;
+        const offset = -index * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
+      }
+
+      function nextSlide() {
+        showSlide(index + 1);
+      }
+
+      function prevSlide() {
+        showSlide(index + 1);
+      }
+
+      setInterval(nextSlide, 6000); //auto-rotate every 6s
     </script>
     
   </body>
