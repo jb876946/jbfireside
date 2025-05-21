@@ -30,7 +30,7 @@ body {
 
 .hero {
   height: 60vh;
-  background: ('') center/cover no-repeat;
+  background: ('https://unsplash.com/photos/blue-vehicle-geeZzrAXyMQ') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
